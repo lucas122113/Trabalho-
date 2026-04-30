@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html la ng="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Estranho</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="trabalho.css">
+</head>
+
+<body>
+  
+    
+  
+   
+<div class="navbar">
+    <img class="logo" src="LS.png" alt="logo do site">
+  <div class="logo2">DARK NIGHT</div>
+  
+
+  <div class="nav-links">
+    <a href="index.html" class="login-btn">Deslogar</a>
+  </div>
+</div>
+
+
+ 
+    </header>
+  <main class="principal">
+    <video autoplay muted loop class="background">
+      <source src="espaço.mp4" type="video/mp4">
+    </video>
+
+    <br>
+    <div class="projetos">
+
+<h2 style="text-align:center;">Pacotes de Viagem</h2>
+<br>
+<table id="tabela" border="1" style="margin:auto; ">
+  <thead>
+    <tr>
+      <th>Destino</th>
+      <th>Duração</th>
+      <th>Preço</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+  const viagens = [
+    { destino: "Rio de Janeiro", duracao: "3 dias", preco: 1200 },
+    { destino: "Salvador", duracao: "5 dias", preco: 2000 },
+    { destino: "Foz do Iguaçu", duracao: "4 dias", preco: 1800 },
+    { destino: "Gramado", duracao: "6 dias", preco: 2500 }
+  ];
+
+  const tbody = document.querySelector("#tabela tbody");
+
+  viagens.forEach(v => {
+    const linha = document.createElement("tr");
+
+    linha.innerHTML = `
+      <td>${v.destino}</td>
+      <td>${v.duracao}</td>
+      <td>R$ ${v.preco.toFixed(2)}</td>
+    `;
+
+    tbody.appendChild(linha);
+  });
+</script>
+</body>
+<br>
+<br>
+<br>
+<br>
+<b>SERVIÇOS EM DESTAQUE</b>
+<ul>
+  <li><b>Agendamento rapido:</b> Roteiros sob medida</li>
+  <li><b>Exploraçao Exclusiva:</b> Areas lindas e wifi gratis  </li>
+  <li><b>Experiencias locais:</b> Guias nativos em todos os destinos</li> 
+</ul>
+
+<br>
+<video autoplay muted loop width="600" height="300" controls>
+      <source src="espaços.mp4" type="video/mp4">
+    </video>
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<div class="outrosct">
+<footer id="contatos">
+  <hr>
+  <p style="margin-bottom: 19px ;">&copy; 2026 Minha Empresa. Todos os direitos reservados.</p>
+ 
+
+  <button id="instagramBtn" class="btn-instagram" data-href="https://www.instagram.com">
+    <span>INSTAGRAM</span>
+  </button>
+
+  <button id="whatsappBtn" class="btn-whatsapp" data-href="https://wa.me/5521966037972">
+    <span>WHATSAPP</span>
+  </button>
+
+
+
+<script>
+document.querySelectorAll('button[data-href]').forEach(btn=>{
+  btn.addEventListener('click', ()=> {
+    const url = btn.getAttribute('data-href');
+    window.open(url, '_blank', 'noopener');
+  });
+})
+</script>
+</footer>
+</div>
+
+</html>
